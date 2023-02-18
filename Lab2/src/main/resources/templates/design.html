@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Design Form</title>
+</head>
+<body>
+    <div class="d-flex flex-column bd-highlight justify-content-center align-items-center w-75 ms-5">
+        <h1 class="mb-3">Design Tekken Reborn Fighter</h1>
+        <form method="post" th:object="${fighter}">
+            <div class="mb-3">
+                <label for="fighterName" class="form-label">Fighter name: </label>
+                <input type="text" class="form-control" name="fighterName" id="fighterName" th:field="*{name}" aria-describedby="fighterHelp">
+                <div id="fighterHelp" class="form-text">
+                    Provide decent fighter name
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="damagePerHit" class="form-label">Damage per hit: </label>
+                <input type="number" class="form-control" id="damagePerHit" th:field="*{damagePerHit}">
+            </div>
+            <div class="mb-3">
+                <label for="health" class="form-label">Health: </label>
+                <input type="number" class="form-control" id="health" th:field="*{health}">
+            </div>
+            <div class="mb-3">
+                <label for="resistance" class="form-label">Resistance: </label>
+                <input type="number" class="form-control" id="resistance" th:field="*{resistance}">
+            </div>
+            <select th:field="*{animeFrom}" aria-label="Anime Selection" id="" class="turn-select mt-5 mc-5">
+                <option th:each="anime: ${animes}" value="${anime}" th:text="${anime}"></option>
+            </select>
+            <button type="submit" class="btn btn-primary mt-5">Create Fighter</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
