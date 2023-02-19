@@ -1,9 +1,7 @@
 package com.cpan252.CpanTekken.repository;
 import com.cpan252.CpanTekken.model.Fighter;
-import java.util.Optional;
+import org.springframework.data.repository.CrudRepository;
 
-public interface FighterRepository {
-    Iterable<Fighter> findAll();
-    Optional<Fighter> findById(Long id);
-    Fighter save(Fighter fighter);
+
+public interface FighterRepository extends CrudRepository<Fighter, Long> {
 }
