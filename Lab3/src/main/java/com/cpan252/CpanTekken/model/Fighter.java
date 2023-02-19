@@ -1,7 +1,6 @@
 package com.cpan252.CpanTekken.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
