@@ -19,6 +19,11 @@ target/
 *.iml
 *.ipr
 
+.intuitgithookrc
+*.log
+
+.DS_Store
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -31,5 +36,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-.fake
